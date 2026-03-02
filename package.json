@@ -1,0 +1,47 @@
+{
+  "name": "mini-kanban-backend",
+  "version": "1.0.0",
+  "description": "Mini-Kanban backend API with clean architecture",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "prisma migrate deploy",
+    "test": "jest --runInBand",
+    "test:watch": "jest --watch",
+    "test:unit": "cross-env SKIP_DB_SETUP=true jest --runInBand tests/unit",
+    "test:integration": "jest --runInBand tests/integration"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "postgresql",
+    "prisma",
+    "clean-architecture",
+    "ddd"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@prisma/client": "^6.4.1",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "uuid": "^11.1.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "@types/express": "^5.0.1",
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.13.4",
+    "@types/supertest": "^6.0.3",
+    "jest": "^29.7.0",
+    "prisma": "^6.4.1",
+    "supertest": "^7.0.0",
+    "ts-jest": "^29.2.5",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.7.3"
+  }
+}
