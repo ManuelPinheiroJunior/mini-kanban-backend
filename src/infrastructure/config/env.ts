@@ -10,5 +10,6 @@ if (!DATABASE_URL) {
 
 export const env = {
   DATABASE_URL,
-  PORT: Number(PORT) || 3000
+  PORT: Number(PORT) || 3000,
+  CORS_ORIGIN: process.env.CORS_ORIGIN
 };

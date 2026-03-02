@@ -52,6 +52,7 @@ cp .env.example .env
 ```env
 DATABASE_URL='postgresql://default:YOUR_PASSWORD@ep-your-neon-host-pooler.us-east-1.aws.neon.tech/YOUR_DATABASE?sslmode=require&channel_binding=require'
 PORT=3000
+CORS_ORIGIN=https://mini-kanban-frontend.vercel.app,http://localhost:5173
 ```
 
 Para testes, use também:
@@ -126,6 +127,7 @@ Este projeto esta configurado para rodar como Serverless Function na Vercel usan
 
 ```env
 DATABASE_URL='postgresql://default:YOUR_PASSWORD@ep-your-neon-host-pooler.us-east-1.aws.neon.tech/YOUR_DATABASE?sslmode=require&channel_binding=require'
+CORS_ORIGIN=https://mini-kanban-frontend.vercel.app
 ```
 
 3. Execute as migrations no banco de producao (fora da Vercel), apontando para o mesmo `DATABASE_URL`:
